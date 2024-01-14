@@ -8,7 +8,7 @@ curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things
 ```
 ## Delete Water Level Subsystem Thing 
 ```
-curl -X 'DELETE' 'http://localhost:8080/api/2/policies/org.eclipse.ditto%3Awater-level-subsystem'   \
+curl -X 'DELETE' 'http://localhost:8080/api/2/policies/org.eclipse.ditto:water-level-subsystem'   \
 -H 'accept: */*'   \
 -H 'Authorization: Basic ZGl0dG86ZGl0dG8='
 ```
