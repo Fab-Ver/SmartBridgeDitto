@@ -1,0 +1,23 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language" : "en"
+        }
+    ],
+    "@type" : "tm:ThingModel",
+    "id" : "light-sensor",
+    "title" : "Light Sensor",
+    "description" : "A light sensor mounted on a Smart Bridge, used to monitor the light intensity",
+    "version": {
+        "model": "1.0.0"
+    },
+    "properties" : {
+        "dark" : {
+            "title" : "Dark",
+            "description" : "Whether the bridge is dark or not.",
+            "type" : "boolean",
+            "default" : false
+        }
+    }
+}
