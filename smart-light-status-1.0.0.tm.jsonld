@@ -1,0 +1,24 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language" : "en"
+        }
+    ],
+    "@type" : "tm:ThingModel",
+    "id" : "smart-light-status",
+    "title" : "Smart Light Status",
+    "description" : "Status of the Smart Light Subsystem",
+    "version": {
+        "model": "1.0.0"
+    },
+    "properties": {
+        "status": {
+            "title": "Status",
+            "description" : "Current Smart Light Subsystem Status",
+            "type": "string",
+            "enum" : ["LIGHT_ON", "LIGHT_OFF", "WAITING", "SYS_OFF"],
+            "default" : "LIGHT_OFF"
+        }
+    }
+}
