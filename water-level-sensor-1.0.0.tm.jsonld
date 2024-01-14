@@ -1,0 +1,29 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language" : "en"
+        },
+        {
+            "qudt": "http://qudt.org/schema/qudt/",
+            "unit": "http://qudt.org/vocab/unit/",
+            "quantitykind": "http://qudt.org/vocab/quantitykind/"
+        }
+    ],
+    "@type" : "tm:ThingModel",
+    "id" : "water-level-sensor",
+    "title" : "Water Level Sensor",
+    "description" : "A sensor mounted on a Smart Bridge, used to monitor the water level",
+    "version": {
+        "model": "1.0.0"
+    },
+    "properties" : {
+        "distance" : {
+            "title" : "Distance",
+            "description" : "Current water distance from the bridge",
+            "type" : "number",
+            "default" : 0.0, 
+            "unit" : "unit:M"
+        }
+    }
+}

@@ -23,7 +23,7 @@
             "default" : 0, 
             "minimum" : 0,
             "maximum" : 180,
-            "unit" : "om:AngleUnit"
+            "unit" : "om2:AngleUnit"
         }
     }
 }
