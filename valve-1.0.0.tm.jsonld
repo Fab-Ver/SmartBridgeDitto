@@ -1,0 +1,12 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {"@language" : "en"}
+    ],
+    "@type" : "tm:ThingModel",
+    "title" : "Valve",
+    "description" : "A valve mounted on a Smart Bridge, used to manage water level",
+    "version": {
+        "model": "1.0.0"
+    }
+}
