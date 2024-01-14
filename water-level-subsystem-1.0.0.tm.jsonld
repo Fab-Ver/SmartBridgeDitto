@@ -8,7 +8,7 @@
     "@type": "tm:ThingModel",
     "id" : "water-level-subsystem",
     "title": "Water Level Subsystem",
-    "description": "A water level subsystem is composed by a valve, a water level sensor, a green led and a red led",
+    "description": "The water level subsystem is composed by a valve, a water level sensor, a green led and a red led",
     "version": {
         "model": "1.0.0"
     },
