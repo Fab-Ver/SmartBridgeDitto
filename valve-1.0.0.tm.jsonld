@@ -1,12 +1,29 @@
 {
     "@context": [
         "https://www.w3.org/2022/wot/td/v1.1",
-        {"@language" : "en"}
+        {
+            "@language" : "en"
+        },
+        {
+            "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/"
+        }
     ],
     "@type" : "tm:ThingModel",
+    "id" : "valve",
     "title" : "Valve",
     "description" : "A valve mounted on a Smart Bridge, used to manage water level",
     "version": {
         "model": "1.0.0"
+    },
+    "properties" : {
+        "angle" : {
+            "title" : "Angle",
+            "description" : "Current valve angle",
+            "type" : "integer",
+            "default" : 0, 
+            "minimum" : 0,
+            "maximum" : 180,
+            "unit" : "om:AngleUnit"
+        }
     }
 }
