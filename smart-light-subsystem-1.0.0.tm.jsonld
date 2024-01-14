@@ -1,0 +1,35 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language" : "en"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "id" : "smart-light-subsystem",
+    "title": "Smart Light Subsystem",
+    "description": "The water level subsystem is composed by a motion sensor, a light sensor, a green led",
+    "version": {
+        "model": "1.0.0"
+    },
+    "links": [
+        {
+            "rel": "tm:submodel",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/motion-sensor-1.0.0.tm.jsonld",
+            "type": "application/tm+json",
+            "instanceName": "MotionSensor"
+        },
+        {
+            "rel": "tm:submodel",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/light-sensor-1.0.0.tm.jsonld",
+            "type": "application/tm+json",
+            "instanceName": "LightSensor"
+        },
+        {
+            "rel": "tm:submodel",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/smart-light-status-1.0.0.tm.jsonld",
+            "type": "application/tm+json",
+            "instanceName": "Status"
+        }
+    ]
+}
