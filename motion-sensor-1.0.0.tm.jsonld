@@ -1,0 +1,23 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language" : "en"
+        }
+    ],
+    "@type" : "tm:ThingModel",
+    "id" : "motion-sensor",
+    "title" : "Motion Sensor",
+    "description" : "A motion sensor mounted on a Smart Bridge, used to monitor the presence of people on the bridge",
+    "version": {
+        "model": "1.0.0"
+    },
+    "properties" : {
+        "detected" : {
+            "title" : "Detected",
+            "description" : "Whether a person is detected on the bridge",
+            "type" : "boolean",
+            "default" : false
+        }
+    }
+}
