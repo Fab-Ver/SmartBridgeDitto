@@ -1,0 +1,27 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1"
+    ],
+    "@type" : "tm:ThingModel",
+    "id" : "blinking-led",
+    "title" : "Blinking Led",
+    "description" : "A led mounted on the Smart Bridge, that can also blink",
+    "links": [
+        {
+            "rel": "tm:extends",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/led-1.0.0.tm.jsonld",
+            "type": "application/tm+json"
+        }
+    ],
+    "version": {
+        "model": "1.0.0"
+    },
+    "properties": {
+        "blinking": {
+            "title": "Blinking",
+            "description": "Whether the led is currently blinking or not",
+            "type": "boolean",
+            "default" : false
+        }
+    }
+}
