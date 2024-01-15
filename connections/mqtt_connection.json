@@ -1,5 +1,4 @@
 {   
-    "id" : "mqtt-connection-01",
     "name": "MQTT Connection",
     "connectionType": "mqtt",
     "connectionStatus": "open",
@@ -18,7 +17,7 @@
     "targets": [
         {
             "addresses": [
-                "org.eclipse.ditto:water-level-subsystem"
+                "water-level-task/water-level-state"
             ],
             "topics" : [
                 "_/_/things/live/messages"
