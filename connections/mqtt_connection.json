@@ -18,7 +18,7 @@
     "targets": [
         {
             "addresses": [
-                "water-level-task/water-level-state"
+                "org.eclipse.ditto:water-level-subsystem"
             ],
             "topics" : [
                 "_/_/things/live/messages"
