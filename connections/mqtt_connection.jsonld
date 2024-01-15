@@ -1,0 +1,31 @@
+{   
+    "id" : "mqtt-connection-01",
+    "name": "MQTT Connection",
+    "connectionType": "mqtt",
+    "connectionStatus": "open",
+    "failoverEnabled" : true,
+    "uri": "mqtt://broker.mqtt-dashboard.com",
+    "sources": [
+        {
+            "addresses": [
+                "water-level-task/water-level-state"
+            ],
+            "authorizationContext": ["nginx:ditto"],
+            "qos": 0,
+            "filters": []
+        }
+    ],
+    "targets": [
+        {
+            "addresses": [
+                "water-level-task/water-level-state"
+            ],
+            "topics" : [
+                "_/_/things/live/messages"
+            ],
+            "authorizationContext": ["nginx:ditto"],
+            "qos": 0,
+            "filters": []
+        }
+    ]
+ }
