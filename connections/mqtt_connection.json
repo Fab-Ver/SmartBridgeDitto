@@ -16,9 +16,7 @@
     ],
     "targets": [
         {
-            "addresses": [
-                "water-level-task/water-level-state"
-            ],
+            "address": "water-level-task/water-level-state",
             "topics" : [
                 "_/_/things/live/messages"
             ],
