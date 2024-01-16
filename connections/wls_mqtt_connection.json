@@ -10,7 +10,7 @@
         "qos": 0
     }],
     "targets": [{
-        "address": "subsystems/{{ thing:id }}/downlink",
+        "address": "subsystems/downlink/{{ thing:id }}",
         "topics" : [
             "_/_/things/twin/events",
             "_/_/things/live/messages"
