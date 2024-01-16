@@ -28,8 +28,15 @@ curl -X 'DELETE' 'http://localhost:8080/api/2/policies/ditto.default:policy'   \
 ```
 
 
-## Create Connection 
+## Create Connections 
+
+MQTT Connection with Water Level Subsystem:
 ```
 curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/wls_mqtt_connection.json)"
+```
+
+MQTT Connection with Smart Light Subsystem:
+```
+curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/sls_mqtt_connection.json)"
 ```
 
