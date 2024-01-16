@@ -17,31 +17,31 @@
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/valve-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "Valve"
+            "instanceName": "valve"
         },
         {
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/water-level-sensor-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "WaterLevelSensor"
+            "instanceName": "water-level-sensor"
         },
         {
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/led-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "GreenLed"
+            "instanceName": "green-led"
         },
         {
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/blinking-led-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "RedLed"
+            "instanceName": "red-led"
         },
         {
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/water-level-status-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "Status"
+            "instanceName": "status"
         }
     ]
 }

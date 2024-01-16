@@ -17,19 +17,19 @@
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/motion-sensor-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "MotionSensor"
+            "instanceName": "motion-sensor"
         },
         {
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/light-sensor-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "LightSensor"
+            "instanceName": "light-sensor"
         },
         {
             "rel": "tm:submodel",
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/smart-light-status-1.0.0.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "Status"
+            "instanceName": "status"
         }
     ]
 }
