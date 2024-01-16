@@ -30,6 +30,6 @@ curl -X 'DELETE' 'http://localhost:8080/api/2/policies/ditto.default:policy'   \
 
 ## Create Connection 
 ```
-curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/mqtt_connection.json)"
+curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/wls_mqtt_connection.json)"
 ```
 
