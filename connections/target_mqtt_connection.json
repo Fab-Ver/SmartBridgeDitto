@@ -8,7 +8,7 @@
     "targets": [{
         "address": "subsystems/downlink/{{ thing:id }}",
         "topics" : [
-            "_/_/things/twin/events",
+            "_/_/things/twin/events?namespaces=org.eclipse.ditto:water-level-subsystem",
             "_/_/things/live/messages"
         ],
         "authorizationContext": ["connection:mqtt"],
