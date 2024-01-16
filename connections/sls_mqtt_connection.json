@@ -1,0 +1,27 @@
+{   
+    "name": "SLS-MQTT Connection",
+    "connectionType": "mqtt",
+    "connectionStatus": "open",
+    "failoverEnabled" : true,
+    "uri": "tcp://test.mosquitto.org:1883",
+    "sources": [{
+        "addresses": ["subsystems/org.eclipse.ditto:smart-light-subsystem/#"],
+        "authorizationContext": ["connection:mqtt"],
+        "qos": 0
+    }],
+    "targets": [{
+        "address": "subsystems/downlink/{{ thing:id }}",
+        "topics" : [
+            "_/_/things/twin/events",
+            "_/_/things/live/messages"
+        ],
+        "authorizationContext": ["connection:mqtt"],
+        "qos": 0
+    }],
+    "mappingContext": {
+        "mappingEngine": "JavaScript",
+        "options": {
+            "incomingScript": "function slsMapToDittoProtocolMsg(headers, textPayload, bytePayload, contentType) {const jsonString = String.fromCharCode.apply(null, new Uint8Array(bytePayload)); const jsonData = JSON.parse(jsonString); const thingId = jsonData.thingId.split(':'); if(headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:smart-light-subsystem/status'){return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/status/properties/status', headers, jsonData.status);} else if (headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:smart-light-subsystem/dark') {return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/light-sensor/properties/dark', headers, jsonData.dark);} else if (headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:smart-light-subsystem/detected') {return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/motion-sensor/properties/detected', headers, jsonData.detected);} else {return null;}}"
+        }
+    }   
+}
