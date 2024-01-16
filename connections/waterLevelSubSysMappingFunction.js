@@ -1,4 +1,6 @@
-function wlsMapToDittoProtocolMsg(headers, textPayload, bytePayload, contentType) {const jsonString = String.fromCharCode.apply(null, new Uint8Array(bytePayload)); const jsonData = JSON.parse(jsonString); 
+function wlsMapToDittoProtocolMsg(headers, textPayload, bytePayload, contentType) {
+    const jsonString = String.fromCharCode.apply(null, new Uint8Array(bytePayload)); 
+    const jsonData = JSON.parse(jsonString); 
     const thingId = jsonData.thingId.split(':'); 
 
     if(headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:water-level-subsystem/status'){
