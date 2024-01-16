@@ -29,8 +29,8 @@
     	},
     	"connection": {
         	"subjects": {
-            	"connection:hivemq-mqtt": {
-                	"type": "Connection to HiveMQ MQTT broker"
+            	"connection:mqtt": {
+                	"type": "Connection to MQTT broker"
             	}
         	},
         	"resources": {
