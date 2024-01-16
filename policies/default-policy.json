@@ -1,0 +1,52 @@
+{
+	"entries": {
+    	"owner": {
+        	"subjects": {
+            	"nginx:ditto": {
+                	"type": "nginx basic auth user"
+            	}
+        	},
+        	"resources": {
+            	"thing:/": {
+                	"grant": [
+                    	"READ","WRITE"
+                	],
+                	"revoke": []
+            	},
+            	"policy:/": {
+                	"grant": [
+                    	"READ","WRITE"
+                	],
+                	"revoke": []
+            	},
+            	"message:/": {
+                	"grant": [
+                    	"READ","WRITE"
+                	],
+                	"revoke": []
+            	}
+        	}
+    	},
+    	"connection": {
+        	"subjects": {
+            	"connection:hivemq-mqtt": {
+                	"type": "Connection to HiveMQ MQTT broker"
+            	}
+        	},
+        	"resources": {
+            	"thing:/": {
+                	"grant": [
+                    	"READ","WRITE"
+                	],
+                	"revoke": []
+            	},
+            	"message:/": {
+                	"grant": [
+                    	"READ","WRITE"
+                	],
+                	"revoke": []
+            	}
+        	}
+    	}
+	}
+}
