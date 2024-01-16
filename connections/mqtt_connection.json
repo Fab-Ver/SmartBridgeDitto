@@ -3,26 +3,25 @@
     "connectionType": "mqtt",
     "connectionStatus": "open",
     "failoverEnabled" : true,
-    "uri": "mqtt://broker.mqtt-dashboard.com",
-    "sources": [
-        {
-            "addresses": [
-                "water-level-task/water-level-state"
-            ],
-            "authorizationContext": ["nginx:ditto"],
-            "qos": 0,
-            "filters": []
+    "uri": "tcp://hivemq:1883",
+    "sources": [{
+        "addresses": ["subsystems/org.eclipse.ditto:water-level-subsystem/#"],
+        "authorizationContext": ["connection:hivemq-mqtt"],
+        "qos": 1,
+        "enforcement": {
+            "input": "{{ source:address }}",
+            "filters": [
+                "subsystems/{{ thing:id }}"
+            ]
         }
-    ],
-    "targets": [
-        {
-            "address": "water-level-task/water-level-state",
-            "topics" : [
-                "_/_/things/live/messages"
-            ],
-            "authorizationContext": ["nginx:ditto"],
-            "qos": 0,
-            "filters": []
-        }
-    ]
+    }],
+    "targets": [{
+        "address": "subsystems/{{ thing:id }}/downlink",
+        "topics" : [
+            "_/_/things/twin/events",
+            "_/_/things/live/messages"
+        ],
+        "authorizationContext": ["connection:hivemq-mqtt"],
+        "qos": 1
+    }]
  }
