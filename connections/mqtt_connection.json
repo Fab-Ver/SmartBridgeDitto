@@ -3,17 +3,11 @@
     "connectionType": "mqtt",
     "connectionStatus": "open",
     "failoverEnabled" : true,
-    "uri": "tcp://hivemq:1883",
+    "uri": "tcp://test.mosquitto.org:1883",
     "sources": [{
         "addresses": ["subsystems/org.eclipse.ditto:water-level-subsystem/#"],
-        "authorizationContext": ["connection:hivemq-mqtt"],
-        "qos": 1,
-        "enforcement": {
-            "input": "{{ source:address }}",
-            "filters": [
-                "subsystems/{{ thing:id }}"
-            ]
-        }
+        "authorizationContext": ["connection:mqtt"],
+        "qos": 0,
     }],
     "targets": [{
         "address": "subsystems/{{ thing:id }}/downlink",
@@ -21,8 +15,8 @@
             "_/_/things/twin/events",
             "_/_/things/live/messages"
         ],
-        "authorizationContext": ["connection:hivemq-mqtt"],
-        "qos": 1
+        "authorizationContext": ["connection:mqtt"],
+        "qos": 0
     }],
     "mappingContext": {
         "mappingEngine": "JavaScript",
