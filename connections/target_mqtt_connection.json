@@ -13,5 +13,11 @@
         ],
         "authorizationContext": ["connection:mqtt"],
         "qos": 0
-    }] 
+    }],
+    "mappingContext": {
+        "mappingEngine": "JavaScript",
+        "options": {
+            "outgoingScript": "function mapFromDittoProtocolMsg(namespace,name,group,channel,criterion,action,path,dittoHeaders,value,status,extra) {let contentType = 'application/json';let bytePayload = null;let textPayload = '{\"test\": ' + value + '\"}';if((name === 'water-level-subsystem' || name === 'smart-light-subsystem') && namespace === 'org.eclipse.ditto'){return Ditto.buildExternalMsg(dittoHeaders,textPayload, bytePayload, contentType );} return null;}"
+        }
+    }
 }
