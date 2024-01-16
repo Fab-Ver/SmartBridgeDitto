@@ -8,7 +8,7 @@
     "targets": [{
         "address": "subsystems/downlink/{{ thing:id }}",
         "topics" : [
-            "_/_/things/twin/events?filter=like(featureId,'status')",
+            "_/_/things/twin/events?filter=eq(features/status/properties/status,'ALARM')",
             "_/_/things/live/messages"
         ],
         "authorizationContext": ["connection:mqtt"],
