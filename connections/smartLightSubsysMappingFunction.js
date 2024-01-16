@@ -1,4 +1,4 @@
-function slsMapToDittoProtocolMsg(headers, textPayload, bytePayload, contentType) {
+function mapToDittoProtocolMsg(headers, textPayload, bytePayload, contentType) {
     const jsonString = String.fromCharCode.apply(null, new Uint8Array(bytePayload)); 
     const jsonData = JSON.parse(jsonString); 
     const thingId = jsonData.thingId.split(':'); 
