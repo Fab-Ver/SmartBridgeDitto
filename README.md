@@ -20,7 +20,7 @@ curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things
 ```
 
 
-## Delete Water Level Subsystem Thing 
+## Delete Default Policy
 ```
 curl -X 'DELETE' 'http://localhost:8080/api/2/policies/ditto.default:policy'   \
 -H 'accept: */*'   \
@@ -30,13 +30,18 @@ curl -X 'DELETE' 'http://localhost:8080/api/2/policies/ditto.default:policy'   \
 
 ## Create Connections 
 
-MQTT Connection with Water Level Subsystem:
+MQTT Connection with Water Level Subsystem (SUB):
 ```
 curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/wls_mqtt_connection.json)"
 ```
 
-MQTT Connection with Smart Light Subsystem:
+MQTT Connection with Smart Light Subsystem (SUB):
 ```
 curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/sls_mqtt_connection.json)"
+```
+
+MQTT Target Connection (PUB):
+```
+curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/target_mqtt_connection.json)"
 ```
 
