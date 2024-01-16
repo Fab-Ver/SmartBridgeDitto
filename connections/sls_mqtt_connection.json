@@ -9,15 +9,7 @@
         "authorizationContext": ["connection:mqtt"],
         "qos": 0
     }],
-    "targets": [{
-        "address": "subsystems/downlink/{{ thing:id }}",
-        "topics" : [
-            "_/_/things/twin/events",
-            "_/_/things/live/messages"
-        ],
-        "authorizationContext": ["connection:mqtt"],
-        "qos": 0
-    }],
+    "targets": [],
     "mappingContext": {
         "mappingEngine": "JavaScript",
         "options": {
