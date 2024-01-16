@@ -1,20 +1,35 @@
 # SmartBridgeWoTModel
 Smart Bridge's model defined according to WoT Thing Model
+
+
+## Create Default Policy
+```
+curl -X PUT 'http://localhost:8080/api/2/policies/ditto.default:policy' -u 'ditto:ditto' -H 'Content-Type: application/json' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/policies/default-policy.json)"
+```
+
+
 ## Create the Water Level Subsystem Thing 
 ```
-curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:water-level-subsystem' \ 
---header 'Content-Type: application/json' \
---data-raw '{"definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/water-level-subsystem-1.0.0.tm.jsonld"}'
+curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:water-level-subsystem' --header 'Content-Type: application/json' --data-raw '{"policyId": "ditto.default:policy", "definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/water-level-subsystem-1.0.0.tm.jsonld"}'
 ```
+
+
 ## Create the Smart Light Subsystem Thing 
 ```
-curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:smart-light-subsystem' \ 
---header 'Content-Type: application/json' \
---data-raw '{"definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/smart-light-subsystem-1.0.0.tm.jsonld"}'
+curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:smart-light-subsystem' --header 'Content-Type: application/json' --data-raw '{"policyId": "ditto.default:policy","definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/smart-light-subsystem-1.0.0.tm.jsonld"}'
 ```
+
+
 ## Delete Water Level Subsystem Thing 
 ```
-curl -X 'DELETE' 'http://localhost:8080/api/2/policies/org.eclipse.ditto:water-level-subsystem'   \
+curl -X 'DELETE' 'http://localhost:8080/api/2/policies/ditto.default:policy'   \
 -H 'accept: */*'   \
 -H 'Authorization: Basic ZGl0dG86ZGl0dG8='
 ```
+
+
+## Create Connection 
+```
+curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/mqtt_connection.json)"
+```
+
