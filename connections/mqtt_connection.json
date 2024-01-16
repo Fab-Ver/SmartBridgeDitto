@@ -7,7 +7,7 @@
     "sources": [{
         "addresses": ["subsystems/org.eclipse.ditto:water-level-subsystem/#"],
         "authorizationContext": ["connection:mqtt"],
-        "qos": 0,
+        "qos": 0
     }],
     "targets": [{
         "address": "subsystems/{{ thing:id }}/downlink",
