@@ -17,8 +17,8 @@
             "title": "Status",
             "description" : "Current Smart Light Subsystem Status",
             "type": "string",
-            "enum" : ["LIGHT_ON", "LIGHT_OFF", "WAITING", "SYS_OFF"],
-            "default" : "LIGHT_OFF"
+            "enum" : ["SYS_OFF", "SYS_ON"],
+            "default" : "SYS_ON"
         }
     }
 }
