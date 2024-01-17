@@ -1,0 +1,30 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language" : "en"
+        }
+    ],
+    "@type" : "tm:ThingModel",
+    "id" : "smart-light",
+    "title" : "Smart Light",
+    "description" : "A light mounted on the Smart Bridge, which is managed by a light sensor and a motion sensor",
+    "links": [
+        {
+            "rel": "tm:extends",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/led-1.0.0.tm.jsonld",
+            "type": "application/tm+json"
+        }
+    ],
+    "version": {
+        "model": "1.0.0"
+    },
+    "properties": {
+        "waiting": {
+            "title": "Waiting",
+            "description": "True if the light is on, but due to signals from the sensors, it is about to be turned off",
+            "type": "boolean",
+            "default" : false
+        }
+    }
+}
