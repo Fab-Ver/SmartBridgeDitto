@@ -12,7 +12,7 @@ function mapToDittoProtocolMsg(headers, textPayload, bytePayload, contentType) {
             return [status_wls, sys_on];
         }
     } else if (headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:water-level-subsystem/distance') {
-        return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/water-level-sensor/properties/distance', headers, jsonData.distance);
+        return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/water-level-sensor/properties/distance', headers, parseFloat(jsonData.distance));
     } else if (headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:water-level-subsystem/angle') {
         return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/valve/properties/angle', headers, jsonData.angle);
     } else if (headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:water-level-subsystem/green') {
