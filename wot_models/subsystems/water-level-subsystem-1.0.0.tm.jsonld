@@ -15,31 +15,31 @@
     "links": [
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/valve-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/valve-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "valve"
         },
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/water-level-sensor-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/water-level-sensor-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "water-level-sensor"
         },
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/led-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/led-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "green-led"
         },
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/blinking-led-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/blinking-led-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "red-led"
         },
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/water-level-status-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/water-level-status-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "status"
         }

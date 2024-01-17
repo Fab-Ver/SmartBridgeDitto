@@ -12,7 +12,7 @@
     "links": [
         {
             "rel": "tm:extends",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/led-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/led-1.0.0.tm.jsonld",
             "type": "application/tm+json"
         }
     ],

@@ -15,19 +15,19 @@
     "links": [
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/motion-sensor-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/motion-sensor-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "motion-sensor"
         },
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/light-sensor-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/light-sensor-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "light-sensor"
         },
         {
             "rel": "tm:submodel",
-            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/smart-light-status-1.0.0.tm.jsonld",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/smart-light-status-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "status"
         }

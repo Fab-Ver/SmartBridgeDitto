@@ -1,5 +1,5 @@
-# SmartBridgeWoTModel
-Smart Bridge's model defined according to WoT Thing Model
+# SmartBridgeDitto
+Smart Bridge Digital Twin created using Eclipse Ditto open source framework
 
 
 ## Create Default Policy
@@ -10,13 +10,13 @@ curl -X PUT 'http://localhost:8080/api/2/policies/ditto.default:policy' -u 'ditt
 
 ## Create the Water Level Subsystem Thing 
 ```
-curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:water-level-subsystem' --header 'Content-Type: application/json' --data-raw '{"policyId": "ditto.default:policy", "definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/water-level-subsystem-1.0.0.tm.jsonld"}'
+curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:water-level-subsystem' --header 'Content-Type: application/json' --data-raw '{"policyId": "ditto.default:policy", "definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/subsystems/water-level-subsystem-1.0.0.tm.jsonld"}'
 ```
 
 
 ## Create the Smart Light Subsystem Thing 
 ```
-curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:smart-light-subsystem' --header 'Content-Type: application/json' --data-raw '{"policyId": "ditto.default:policy","definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/smart-light-subsystem-1.0.0.tm.jsonld"}'
+curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.eclipse.ditto:smart-light-subsystem' --header 'Content-Type: application/json' --data-raw '{"policyId": "ditto.default:policy","definition": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/subsystems/smart-light-subsystem-1.0.0.tm.jsonld"}'
 ```
 
 
