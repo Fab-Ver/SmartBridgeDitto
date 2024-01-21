@@ -42,6 +42,12 @@
             "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/water-level-status-1.0.0.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "status"
+        },
+        {
+            "rel": "tm:submodel",
+            "href": "https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/wot_models/components/manual-status-1.0.0.tm.jsonld",
+            "type": "application/tm+json",
+            "instanceName": "manual"
         }
     ]
 }
