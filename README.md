@@ -43,5 +43,9 @@ curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application
 MQTT Events Connection (PUB):
 ```
 curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeWoTModel/main/connections/events_connection.json)"
+
+MQTT Messages Connection (PUB):
+```
+curl -X 'POST' 'http://localhost:8080/api/2/connections' -H 'accept: application/json' -H 'Content-Type: application/json' -u 'devops:foobar' -d "$(curl -s https://raw.githubusercontent.com/Fab-Ver/SmartBridgeDitto/main/connections/messages_connection.json)"
 ```
 
