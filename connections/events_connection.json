@@ -1,15 +1,14 @@
 {   
-    "name": "Target Connection",
+    "name": "Events Connection",
     "connectionType": "mqtt",
     "connectionStatus": "open",
     "failoverEnabled" : true,
     "uri": "tcp://test.mosquitto.org:1883",
     "sources": [],
     "targets": [{
-        "address": "subsystems/downlink/{{ thing:id }}",
+        "address": "subsystems/events/{{ thing:id }}",
         "topics" : [
-            "_/_/things/twin/events?filter=or(eq(features/status/properties/status,'SYS_OFF'),eq(features/status/properties/status,'SYS_ON'))",
-            "_/_/things/live/messages"
+            "_/_/things/twin/events?filter=or(eq(features/status/properties/status,'SYS_OFF'),eq(features/status/properties/status,'SYS_ON'))"
         ],
         "authorizationContext": ["connection:mqtt"],
         "qos": 0
