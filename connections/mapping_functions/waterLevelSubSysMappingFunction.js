@@ -20,6 +20,8 @@ function mapToDittoProtocolMsg(headers, textPayload, bytePayload, contentType) {
     } else if (headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:water-level-subsystem/red') {
         const value = {on : jsonData.on, blinking : jsonData.blinking};
         return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/red-led/properties/', headers, value);
+    } else if (headers['mqtt.topic'] === 'subsystems/org.eclipse.ditto:water-level-subsystem/manual'){
+        return Ditto.buildDittoProtocolMsg( thingId[0], thingId[1], 'things','twin', 'commands','modify','/features/manual/properties/on', headers, jsonData.manual);
     } else {
         return null;
     }
