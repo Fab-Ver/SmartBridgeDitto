@@ -1,0 +1,16 @@
+{   
+    "name": "Messages Connection",
+    "connectionType": "mqtt",
+    "connectionStatus": "open",
+    "failoverEnabled" : true,
+    "uri": "tcp://test.mosquitto.org:1883",
+    "sources": [],
+    "targets": [{
+        "address": "subsystems/messages/{{ thing:id }}",
+        "topics" : [
+            "_/_/things/live/messages"
+        ],
+        "authorizationContext": ["connection:mqtt"],
+        "qos": 0
+    }]
+}
