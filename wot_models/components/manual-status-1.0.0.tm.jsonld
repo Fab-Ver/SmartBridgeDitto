@@ -13,8 +13,8 @@
         "model": "1.0.0"
     },
     "properties": {
-        "status": {
-            "title": "Status",
+        "on": {
+            "title": "On",
             "description" : "True if the manual mode is active",
             "type": "boolean",
             "default" : false
