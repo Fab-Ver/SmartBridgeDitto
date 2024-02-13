@@ -8,7 +8,7 @@
     "@type": "tm:ThingModel",
     "id" : "smart-light-subsystem",
     "title": "Smart Light Subsystem",
-    "description": "The water level subsystem is composed by a motion sensor, a light sensor and a smart light",
+    "description": "The smart light subsystem is composed by a motion sensor, a light sensor and a smart light",
     "version": {
         "model": "1.0.0"
     },
