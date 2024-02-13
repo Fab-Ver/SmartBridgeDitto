@@ -17,7 +17,7 @@
             "title": "Status",
             "description" : "Current Water Level Subsystem Status",
             "type": "string",
-            "enum" : ["NORMAL", "PRE_ALARM", "ALARM", "MANUAL"],
+            "enum" : ["NORMAL", "PRE_ALARM", "ALARM"],
             "default" : "NORMAL"
         }
     }
